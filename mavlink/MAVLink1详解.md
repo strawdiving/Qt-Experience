@@ -14,7 +14,7 @@ Planner、QGroundControl地面站均使用了MAVLink协议进行通讯。
 
 ### MAVLink源文件结构
 
-![structure]()
+![structure](https://github.com/strawdiving/Qt-Experience/blob/master/mavlink/images/structure.png)
 
 - common文件夹：原始的MAVLink消息，包括各种消息的头文件
 
@@ -38,7 +38,7 @@ Planner、QGroundControl地面站均使用了MAVLink协议进行通讯。
 
 　MAVLink传输时，以消息包作为基本单位，数据长度为8~263字节。消息数据包的结构如下：
 
-![message]()
+![message](https://github.com/strawdiving/Qt-Experience/blob/master/mavlink/images/message.png)
 
 
 
@@ -81,31 +81,31 @@ MAVLink通用消息集可以在《MAVLLINK Common Message set specifications》�
 
 MAVLink Type Enumerations在common.h文件中定义。如下，枚举变量定义了飞行器的类型MAV_AUTOPILOT。
 
-![enum]()
+![enum](https://github.com/strawdiving/Qt-Experience/blob/master/mavlink/images/enum.png)
 
 ```c++
 typedef enum MAV_AUTOPILOT
- 2 {
- 3     MAV_AUTOPILOT_GENERIC=0, /* Generic autopilot, full support for everything | */
- 4     MAV_AUTOPILOT_RESERVED=1, /* Reserved for future use. | */
- 5     MAV_AUTOPILOT_SLUGS=2, /* SLUGS autopilot, http://slugsuav.soe.ucsc.edu | */
- 6     MAV_AUTOPILOT_ARDUPILOTMEGA=3, /* ArduPilotMega / ArduCopter, http://diydrones.com | */
- 7     MAV_AUTOPILOT_OPENPILOT=4, /* OpenPilot, http://openpilot.org | */
- 8     MAV_AUTOPILOT_GENERIC_WAYPOINTS_ONLY=5, /* Generic autopilot only supporting simple waypoints | */
- 9     MAV_AUTOPILOT_GENERIC_WAYPOINTS_AND_SIMPLE_NAVIGATION_ONLY=6, /* Generic autopilot supporting waypoints and other simple navigation commands | */
-10     MAV_AUTOPILOT_GENERIC_MISSION_FULL=7, /* Generic autopilot supporting the full mission command set | */
-11     MAV_AUTOPILOT_INVALID=8, /* No valid autopilot, e.g. a GCS or other MAVLink component | */
-12     MAV_AUTOPILOT_PPZ=9, /* PPZ UAV - http://nongnu.org/paparazzi | */
-13     MAV_AUTOPILOT_UDB=10, /* UAV Dev Board | */
-14     MAV_AUTOPILOT_FP=11, /* FlexiPilot | */
-15     MAV_AUTOPILOT_PX4=12, /* PX4 Autopilot - http://pixhawk.ethz.ch/px4/ | */
-16     MAV_AUTOPILOT_SMACCMPILOT=13, /* SMACCMPilot - http://smaccmpilot.org | */
-17     MAV_AUTOPILOT_AUTOQUAD=14, /* AutoQuad -- http://autoquad.org | */
-18     MAV_AUTOPILOT_ARMAZILA=15, /* Armazila -- http://armazila.com | */
-19     MAV_AUTOPILOT_AEROB=16, /* Aerob -- http://aerob.ru | */
-20     MAV_AUTOPILOT_ASLUAV=17, /* ASLUAV autopilot -- http://www.asl.ethz.ch | */
-21     MAV_AUTOPILOT_ENUM_END=18, /*  | */
-22 } MAV_AUTOPILOT;
+  {
+      MAV_AUTOPILOT_GENERIC=0, /* Generic autopilot, full support for everything | */
+      MAV_AUTOPILOT_RESERVED=1, /* Reserved for future use. | */
+      MAV_AUTOPILOT_SLUGS=2, /* SLUGS autopilot, http://slugsuav.soe.ucsc.edu | */
+      MAV_AUTOPILOT_ARDUPILOTMEGA=3, /* ArduPilotMega / ArduCopter, http://diydrones.com | */
+      MAV_AUTOPILOT_OPENPILOT=4, /* OpenPilot, http://openpilot.org | */
+      MAV_AUTOPILOT_GENERIC_WAYPOINTS_ONLY=5, /* Generic autopilot only supporting simple waypoints | */
+      MAV_AUTOPILOT_GENERIC_WAYPOINTS_AND_SIMPLE_NAVIGATION_ONLY=6, /* Generic autopilot supporting waypoints and other simple navigation commands | */
+      MAV_AUTOPILOT_GENERIC_MISSION_FULL=7, /* Generic autopilot supporting the full mission command set | */
+      MAV_AUTOPILOT_INVALID=8, /* No valid autopilot, e.g. a GCS or other MAVLink component | */
+      MAV_AUTOPILOT_PPZ=9, /* PPZ UAV - http://nongnu.org/paparazzi | */
+      MAV_AUTOPILOT_UDB=10, /* UAV Dev Board | */
+      MAV_AUTOPILOT_FP=11, /* FlexiPilot | */
+      MAV_AUTOPILOT_PX4=12, /* PX4 Autopilot - http://pixhawk.ethz.ch/px4/ | */
+      MAV_AUTOPILOT_SMACCMPILOT=13, /* SMACCMPilot - http://smaccmpilot.org | */
+      MAV_AUTOPILOT_AUTOQUAD=14, /* AutoQuad -- http://autoquad.org | */
+      MAV_AUTOPILOT_ARMAZILA=15, /* Armazila -- http://armazila.com | */
+      MAV_AUTOPILOT_AEROB=16, /* Aerob -- http://aerob.ru | */
+      MAV_AUTOPILOT_ASLUAV=17, /* ASLUAV autopilot -- http://www.asl.ethz.ch | */
+      MAV_AUTOPILOT_ENUM_END=18, /*  | */
+  } MAV_AUTOPILOT;
 
 ```
 
@@ -119,7 +119,7 @@ MAVLink Messages在common文件夹内每个消息包的头文件中定义。在�
 
 心跳包的内容存放在payload数据载荷中。以心跳包为例，
 
-![heartbeat]()
+![heartbeat](https://github.com/strawdiving/Qt-Experience/blob/master/mavlink/images/heartbeat.png)
 
 ```c++
 typedef struct __mavlink_heartbeat_t
