@@ -36,7 +36,7 @@ LIBS +=F:\opencv\build\x86\vc12\lib\opencv_ts300.lib \
 
 执行CMake,用于把OpenCV的源码生成对应的VS工程。
 
-![cmake](cmake.png)
+![cmake](https://github.com/strawdiving/Qt-Experience/blob/master/opencv/images/cmake.png)
 
 1. 设置OpenCV的安装文件路径（Where is the source code）和想要生成的文件路径（Where to build the binaries）, **  安装文件路径必须包括cmakelists文件，想要生成的文件路径任意。** 
 
