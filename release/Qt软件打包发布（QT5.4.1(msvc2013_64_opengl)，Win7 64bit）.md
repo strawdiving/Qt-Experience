@@ -28,7 +28,7 @@ Release 称为发布版本，它往往是进行了各种优化，使得程序在
 
 本文采用Qt动态编译，release版本的程序。需要将相应的dll跟Qt可执行程序exe文件放在一个目录下。如下例所示：
 
-![dll文件](https://github.com/strawdiving/)
+![dll文件](https://github.com/strawdiving/Qt-Experience/blob/master/release/images/dll%E6%96%87%E4%BB%B6.png)
 
 所需的dll文件包括：
 
@@ -63,11 +63,11 @@ Qt的图片解码库比如jpeg、gif解码等是以插件形式存在的，要�
 
 如果将Qt的bin目录加入PATH环境，就可以直接在命令行使用windeployqt调用。将生成的xxx.exe可执行文件复制到一个空的文件夹里，进入这个文件夹 ，运行windeployqt xxx.exe，则该执行文件需要的大部分依赖文件都自动拷贝到这个文件夹里了。
 
-![windeployqt](windeployqt.png)
+![windeployqt](https://github.com/strawdiving/Qt-Experience/blob/master/release/images/windeployqt.png)
 
 如果还使用了其他的第三方的SDK，如QWT，OpenCV等，就需要手动将所需dll拷贝过来，如果不知道还需要哪些dll文件，可以用Dependency Walker (depends.exe)和微软的 procexp.exe 来查看程序运行时还缺少哪些dll。
 
-![dependency walker](dependency walker.png)
+![dependency walker](https://github.com/strawdiving/Qt-Experience/blob/master/release/images/dependency%20walker.png)
 
 2.  一个Qt的安装包制作工具，用户打包程序，变成（桌面）安装包，如开源工具Inno Setup
 
