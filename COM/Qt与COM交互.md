@@ -20,7 +20,7 @@ Qt中提供了QtActiveX模块来支持微软ActiveX的开发，ActiveQt包含了
 
   QAxServer可以将我们写的Qt控件导出为COM对象或者是ActiveX控件。通过QAxAggregated、QAxBindable和QAxFactory类，通过了进程内和可执行程序exe两种方式的COM Server模式，用来将Qt写的内容导出为COM或者ActiveX供他人使用。
 
-  ![Qt&COM]()
+  ![Qt&COM](https://github.com/strawdiving/Qt-Experience/blob/master/COM/images/Qt%26COM.png)
 
 QAxContainer是由三个类组成的。分别是：
 
@@ -60,7 +60,7 @@ voiceObj->setControl("sapi.spvoice");
 
 既然可以调用ActiveX控件的方法属性，还需要 **COM中的数据类型和Qt中使用的数据类型的转换** 。下面就是COM中数据类型和Qt中的数据类型对应的表格：
 
-![types](types.jpeg)
+![types](https://github.com/strawdiving/Qt-Experience/blob/master/COM/images/types.jpg)
 
 Qt的ActiveX框架会将Qt类中的要素转换为COM中的标准要素供其他调用者使用，具体来说：
 
