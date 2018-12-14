@@ -66,11 +66,13 @@ Qwt的基类有以下几个：
 
 需要在pro中进行配置：
 
-1.   **LIBS += -L"D:/Qt/Qt5.4.1/5.4/msvc2013_opengl/lib" –lqwtd**
+```c++
+ LIBS += -L"D:/Qt/Qt5.4.1/5.4/msvc2013_opengl/lib" –lqwtd
+ 或 LIBS += -L"D:/Qt/Qt5.4.1/5.4/msvc2013_opengl/lib" -lqwt
+ 
+ INCLUDEPATH += D:/Qt/Qt5.4.1/5.4/msvc2013_opengl/include/QtQwt
 
-   **或 LIBS += -L"D:/Qt/Qt5.4.1/5.4/msvc2013_opengl/lib" -lqwt** 
-
-2.   **INCLUDEPATH += D:/Qt/Qt5.4.1/5.4/msvc2013_opengl/include/QtQwt** 
+```
 
 然后就可以在Designer中进行设计了。如果直接双击打开.ui文件，找不到qwt插件，则选择用Qt Designer打开。
 
