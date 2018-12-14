@@ -4,7 +4,7 @@
 
 QWT， Qt Widgets for Technical Applications，是一个基于LGPL版权协议的开源项目，可生成各种统计图。它为具有技术专业背景的程序提供GUI组件和一组实用类，其目标是以基于2D方式的窗体部件来显示数据，数据源以数值，数组或一组浮点数等方式提供， 输出方式可以是Curves（曲线），Slider（滚动条），Dials（圆盘），Compasses（仪表盘）等等。该工具库基于Qt开发，所以也继承了Qt的跨平台特性。
 
-![QWT](QWT.png)
+![QWT](https://github.com/strawdiving/Qt-Experience/blob/master/QWT/images/qwt%20examples.png)
 
 ### 下载安装
 
@@ -17,7 +17,7 @@ QWT官方网址：[QWT官方网址][1]
 
 选择.zip文件下载，解压
 
-![qwt-6.1.2](qwt-6.1.2.png)
+![qwt-6.1.2](https://github.com/strawdiving/Qt-Experience/blob/master/QWT/images/qwt-6.1.2.png)
 
 - designer文件夹： qwt插件的源码，用于生成Qt Designer插件，插件可以在Qt Designer中直接拖拽使用
 - doc文件夹：帮助文档
@@ -28,11 +28,11 @@ QWT官方网址：[QWT官方网址][1]
 
 使用Qt Creator打开qwt.pro，进行编译（qmake->build），编译完后会在lib文件夹下生成 **qwt.dll** 和 **qwt.lib（release版）** ， 以及 **qwtd.dll** 和 **qwtd.lib（debug版）** 。
 
-![build](build.png)
+![build](https://github.com/strawdiving/Qt-Experience/blob/master/QWT/images/build.png)
 
 同时会生成qt creator使用的插件 **qwt_designer_plugin.dll** 和 **qwt_designer_plugin.lib** 。
 
-![plugin](plugin.png)
+![plugin](https://github.com/strawdiving/Qt-Experience/blob/master/QWT/images/plugin.png)
 
 ### 配置
 
@@ -66,19 +66,21 @@ Qwt的基类有以下几个：
 
 需要在pro中进行配置：
 
-1.   **LIBS += -L"D:/Qt/Qt5.4.1/5.4/msvc2013_opengl/lib" –lqwtd**
+```c++
+ LIBS += -L"D:/Qt/Qt5.4.1/5.4/msvc2013_opengl/lib" –lqwtd
+ 或 LIBS += -L"D:/Qt/Qt5.4.1/5.4/msvc2013_opengl/lib" -lqwt
+ 
+ INCLUDEPATH += D:/Qt/Qt5.4.1/5.4/msvc2013_opengl/include/QtQwt
 
-   **或 LIBS += -L"D:/Qt/Qt5.4.1/5.4/msvc2013_opengl/lib" -lqwt** 
-
-2.   **INCLUDEPATH += D:/Qt/Qt5.4.1/5.4/msvc2013_opengl/include/QtQwt** 
+```
 
 然后就可以在Designer中进行设计了。如果直接双击打开.ui文件，找不到qwt插件，则选择用Qt Designer打开。
 
-![open-ui](open-ui.png)
+![open-ui](https://github.com/strawdiving/Qt-Experience/blob/master/QWT/images/open-ui.png)
 
 左边栏中出现Qwt的插件，可以直接拖拽使用。
 
-![qwt-plugin](qwt-plugin.png)
+![qwt-plugin](https://github.com/strawdiving/Qt-Experience/blob/master/QWT/images/qwt-plugin.png)
 
 #### 参考：
 
