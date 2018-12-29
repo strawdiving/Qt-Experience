@@ -1,6 +1,6 @@
 ## download文件
 
-QNetWorkAccessManager
+QNetWorkAccessManager （since Qt 4.4）发送网络请求并接收回复
 
 QNetworkRequest
 
