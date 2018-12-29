@@ -271,4 +271,4 @@ mavlink_parse_char调用mavlink_frame_char，mavlink_frame_char调用mavlink_fra
     MAVLINK_PARSE_STATE_GOT_BAD_CRC1
 ```
 
-![mavlink_status]()
+![mavlink_state](https://github.com/strawdiving/Qt-Experience/blob/master/mavlink/images/mavlink_state.png)
